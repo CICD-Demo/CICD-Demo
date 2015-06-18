@@ -1,5 +1,32 @@
+# used by the CICD-Demo git management scripts to pull/push with appropriate
+# repo
 GITROOT='https://github.com/CICD-Demo'
 GITROOT_PUSH='git@github.com:CICD-Demo'
+
+# login to OSE3 and Gogs
+DEMOUSER='jim'
+DEMOPW='redhat'
+DOMAIN='example.com'
+
+# docker images to cache locally
+IMAGES='docker.io/cicddemo/amq:latest docker.io/cicddemo/gogs:latest docker.io/cicddemo/sti-eap:latest docker.io/cicddemo/sti-httpd:latest docker.io/jenkins:latest'
+
+# local m2 mirror/cache server, if you have one
+MAVEN_MIRROR=
+
+# all application microservices repositories
 MONSTER_REPOS='amq apiserver camel frontend mysql-iaas mysql-paas webserver'
-INFRA_REPOS='gogs jenkins'
+# all additional CICD-Demo development repositories
 DEV_REPOS='docker-amq docker-gogs docker-sti-eap docker-sti-httpd gogs-src'
+
+# CICD-DEMO infrastructure project
+INFRA='infra'
+INFRA_REPOS='gogs'
+
+# Integration test project
+INTEGRATION='integration'
+INTEGRATION_REPOS='amq apiserver camel frontend mysql-paas webserver'
+
+# Production project
+PROD='prod'
+PROD_REPOS='amq apiserver camel frontend mysql-iaas webserver'
