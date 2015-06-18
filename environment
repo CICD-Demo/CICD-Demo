@@ -1,4 +1,5 @@
-GITROOT='https://github.com/CICD-Demo/'
+GITROOT='https://github.com/CICD-Demo'
+GITROOT_PUSH='git@github.com:CICD-Demo'
 MONSTER_REPOS='amq apiserver camel frontend mysql-iaas mysql-paas webserver'
 INFRA_REPOS='gogs jenkins'
 DEV_REPOS='docker-amq docker-gogs docker-sti-eap docker-sti-httpd gogs-src'

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+all_repos() {
+  repos=$1
+  root=$2
+  shift 2
+
+  for repo in $repos; do
+    echo ${bold}$root/$repo${normal}
+    "$@" $root $repo
+    echo
+  done
+}
+
+bold=$(tput bold)
+normal=$(tput sgr0)
