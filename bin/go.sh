@@ -40,6 +40,8 @@ for proj in $INFRA; do
   for repo in $INFRA_REPOS; do
     infra/$repo/deploy.sh
   done
-done
 
-bin/push-gogs.sh
+  if [ $proj = gogs ]; then
+    bin/push-gogs.sh
+  fi
+done
