@@ -9,7 +9,7 @@ DEMOPW='redhat'
 DOMAIN='example.com'
 
 # docker images to cache locally
-IMAGES='docker.io/cicddemo/amq:latest docker.io/cicddemo/gogs:latest docker.io/cicddemo/sti-eap:latest docker.io/cicddemo/sti-httpd:latest docker.io/jenkins:latest'
+IMAGES='docker.io/cicddemo/amq:latest docker.io/cicddemo/gogs:latest docker.io/cicddemo/jenkins:latest docker.io/cicddemo/sti-eap:latest docker.io/cicddemo/sti-httpd:latest'
 
 # local m2 mirror/cache server, if you have one
 MAVEN_MIRROR=
@@ -17,11 +17,11 @@ MAVEN_MIRROR=
 # all application microservices repositories
 MONSTER_REPOS='amq apiserver camel frontend mysql-iaas mysql-paas webserver'
 # all additional CICD-Demo development repositories
-DEV_REPOS='docker-amq docker-gogs docker-sti-eap docker-sti-httpd gogs-src'
+DEV_REPOS='docker-amq docker-gogs docker-jenkins docker-sti-eap docker-sti-httpd gogs-src'
 
 # CICD-DEMO infrastructure project
 INFRA='infra'
-INFRA_REPOS='gogs'
+INFRA_REPOS='gogs jenkins'
 
 # Integration test project
 INTEGRATION='integration'
