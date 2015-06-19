@@ -15,7 +15,7 @@ IMAGES='docker.io/cicddemo/amq:latest docker.io/cicddemo/gogs:latest docker.io/c
 MAVEN_MIRROR=
 
 # all application microservices repositories
-MONSTER_REPOS='amq apiserver camel frontend mysql-iaas mysql-paas webserver'
+MONSTER_REPOS='broker restapis emailroute reverseproxy db-iaas db-paas webserver'
 # all additional CICD-Demo development repositories
 DEV_REPOS='docker-amq docker-gogs docker-jenkins docker-sti-eap docker-sti-httpd gogs-src'
 
@@ -25,8 +25,12 @@ INFRA_REPOS='gogs jenkins'
 
 # Integration test project
 INTEGRATION='integration'
-INTEGRATION_REPOS='amq apiserver camel frontend mysql-paas webserver'
+INTEGRATION_REPOS='broker restapis emailroute reverseproxy db-paas webserver'
 
 # Production project
 PROD='prod'
-PROD_REPOS='amq apiserver camel frontend mysql-iaas webserver'
+PROD_REPOS='broker restapis emailroute reverseproxy db-iaas webserver'
+
+# Endpoints for IaaS-based MySQL
+IAAS_MYSQL_IP=
+IAAS_MYSQL_PORT=3306
