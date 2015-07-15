@@ -8,10 +8,10 @@ cd $(dirname $0)/..
 
 for i in $IMAGES; do
 	if [ -e cache/$i ]; then
-		docker load <cache/$i
+		sudo docker load <cache/$i
 	else
 		mkdir -p cache/$(dirname $i)
-		docker pull $i
-		docker save $i >cache/$i
+		sudo docker pull $i
+		sudo docker save $i >cache/$i
 	fi
 done

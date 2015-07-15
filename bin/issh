@@ -1,3 +1,7 @@
 #!/bin/bash
 
-exec ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o LogLevel=QUIET "$@"
+if [ -n "$SSH_IDENTITY" ]; then
+  SSH_IDENTITY="-i $SSH_IDENTITY"
+fi
+
+exec ssh $SSH_IDENTITY -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o LogLevel=QUIET "$@"

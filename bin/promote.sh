@@ -5,8 +5,8 @@ cd $(dirname $0)/..
 . bin/utils
 . environment
 
-osc project default
-DOCKER_EP=$(osc get services docker-registry -o template --template='{{.spec.portalIP}}:{{(index .spec.ports 0).port}}')
+oc project default
+DOCKER_EP=$(oc get svc docker-registry -o template --template='{{.spec.portalIP}}:{{(index .spec.ports 0).port}}')
 
 callback() {
   [ -e $1/$2/build.sh ] || return

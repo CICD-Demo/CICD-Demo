@@ -9,15 +9,16 @@ DEMOPW='redhat'
 DOMAIN='example.com'
 
 # docker images to cache locally
-IMAGES='docker.io/cicddemo/amq:latest docker.io/cicddemo/gogs:latest docker.io/cicddemo/jenkins:latest docker.io/cicddemo/sti-eap:latest docker.io/cicddemo/sti-httpd:latest'
+IMAGES='docker.io/cicddemo/amq:latest docker.io/cicddemo/gogs:latest docker.io/cicddemo/jenkins:latest docker.io/cicddemo/sti-eap:latest registry.access.redhat.com/openshift3/mysql-55-rhel7:latest'
+STI_IMAGESTREAMS='docker.io/cicddemo/sti-eap'
 
 # local m2 mirror/cache server, if you have one
 MAVEN_MIRROR=
 
 # all application microservices repositories
-MONSTER_REPOS='broker restapis emailroute reverseproxy db-iaas db-paas webserver'
+MONSTER_REPOS='broker restapis emailroute db-iaas db-paas webserver'
 # all additional CICD-Demo development repositories
-DEV_REPOS='docker-amq docker-gogs docker-jenkins docker-sti-eap docker-sti-httpd gogs-src'
+DEV_REPOS='docker-amq docker-gogs docker-jenkins docker-sti-eap gogs-src'
 
 # CICD-DEMO infrastructure project
 INFRA='infra'

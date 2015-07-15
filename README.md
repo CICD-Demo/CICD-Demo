@@ -5,7 +5,7 @@ Jim Minter <jminter@redhat.com>, 19/06/2015
 ### Prerequisites
 
 * OpenShift Enterprise 3 infrastructure
-* Client with osc/osadm and java-1.8.0-openjdk installed
+* Client with oc/oadm and java-1.8.0-openjdk installed
 
 ### Getting started
 
