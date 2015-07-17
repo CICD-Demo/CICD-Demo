@@ -28,12 +28,19 @@ spec:
 EOF
 done
 
+for proj in $INFRA $DEMOUSER $INTEGRATION $PROD; do
+  sudo oadm new-project $proj --admin=$DEMOUSER
+done
+
+# serviceAccount required for containers running as root
+echo '{"kind": "ServiceAccount", "apiVersion": "v1", "metadata": {"name": "root"}}' | sudo oc create -n $INFRA -f -
+(sudo oc get -o yaml scc privileged; echo - system:serviceaccount:$INFRA:root) | sudo oc update scc privileged -f -
+
 for key in administrator $DEMOUSER; do
   [ -e ~/.ssh/id_rsa_$key ] || ssh-keygen -f ~/.ssh/id_rsa_$key -N ''
 done
 
 for proj in $INTEGRATION $DEMOUSER; do
-  sudo oadm new-project $proj --admin=$DEMOUSER
   oc project $proj
 
   for repo in $INTEGRATION_REPOS; do
@@ -43,7 +50,6 @@ for proj in $INTEGRATION $DEMOUSER; do
 done
 
 for proj in $PROD; do
-  sudo oadm new-project $proj --admin=$DEMOUSER
   oc project $proj
 
   for repo in $PROD_REPOS; do
@@ -52,14 +58,9 @@ for proj in $PROD; do
 done
 
 for proj in $INFRA; do
-  sudo oadm new-project $proj --admin=$DEMOUSER
   oc project $proj
 
   for repo in $INFRA_REPOS; do
     infra/$repo/deploy.sh
   done
 done
-
-# serviceAccount required for containers running as root
-echo '{"kind": "ServiceAccount", "apiVersion": "v1", "metadata": {"name": "root"}}' | sudo oc create -n infra -f -
-(sudo oc get -o yaml scc privileged; echo - system:serviceaccount:infra:root) | sudo oc update scc privileged -f -
