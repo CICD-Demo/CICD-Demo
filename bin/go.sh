@@ -51,15 +51,17 @@ for proj in $PROD; do
   done
 done
 
+
 for proj in $INFRA; do
   sudo oadm new-project $proj --admin=$DEMOUSER
   oc project $proj
+
+  # serviceAccount required for containers running as root, before infra project creation as needed for Gogs to start.
+  echo '{"kind": "ServiceAccount", "apiVersion": "v1", "metadata": {"name": "root"}}' | sudo oc create -n $proj -f -
+  (sudo oc get -o yaml scc privileged; echo - system:serviceaccount:infra:root) | sudo oc update scc privileged -f -
 
   for repo in $INFRA_REPOS; do
     infra/$repo/deploy.sh
   done
 done
 
-# serviceAccount required for containers running as root
-echo '{"kind": "ServiceAccount", "apiVersion": "v1", "metadata": {"name": "root"}}' | sudo oc create -n infra -f -
-(sudo oc get -o yaml scc privileged; echo - system:serviceaccount:infra:root) | sudo oc update scc privileged -f -
