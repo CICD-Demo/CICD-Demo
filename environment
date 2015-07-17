@@ -26,11 +26,11 @@ INFRA_REPOS='gogs jenkins'
 
 # Integration test project
 INTEGRATION='integration'
-INTEGRATION_REPOS='broker restapis emailroute reverseproxy db-paas webserver'
+INTEGRATION_REPOS='broker restapis emailroute db-paas webserver'
 
 # Production project
 PROD='prod'
-PROD_REPOS='broker restapis emailroute reverseproxy db-iaas webserver'
+PROD_REPOS='broker restapis emailroute db-iaas webserver'
 
 # Endpoints for IaaS-based MySQL
 IAAS_MYSQL_IP=
