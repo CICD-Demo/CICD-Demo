@@ -6,6 +6,7 @@ Jim Minter <jminter@redhat.com>, 19/06/2015
 
 * OpenShift Enterprise 3.0 GA infrastructure
 * Client with oc/oadm and java-1.8.0-openjdk installed
+* Permissions to add ImageStreams to the openshift project, create ServiceAccounts and add them to the privileged SCC.  These are required to start Gogs as root (temporary hack), and to allow Jenkins to bind to the host Docker socket.
 
 ### Getting started
 
