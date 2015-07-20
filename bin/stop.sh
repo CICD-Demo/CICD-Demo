@@ -5,8 +5,5 @@ cd $(dirname $0)/..
 . environment
 
 for proj in $INTEGRATION $PROD $INFRA $DEMOUSER; do
-  oc project $proj
-  oc delete all --all
+  oc delete project $proj
 done
-
-oc project default

@@ -12,9 +12,6 @@ fi
 
 bin/cache.sh
 
-sudo htpasswd -b /etc/openshift/openshift-passwd $DEMOUSER $DEMOPW
-oc login -u $DEMOUSER -p $DEMOPW
-
 for img in $STI_IMAGESTREAMS; do
   sudo oc create -n openshift -f - <<EOF
 kind: ImageStream
@@ -29,7 +26,7 @@ EOF
 done
 
 for proj in $INFRA $DEMOUSER $INTEGRATION $PROD; do
-  sudo oadm new-project $proj --admin=$DEMOUSER
+  oc new-project $proj
 done
 
 # serviceAccount required for containers running as root

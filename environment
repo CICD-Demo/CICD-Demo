@@ -4,7 +4,7 @@ GITROOT='https://github.com/CICD-Demo'
 GITROOT_PUSH='git@github.com:CICD-Demo'
 
 # login to OSE3 and Gogs
-DEMOUSER='jim'
+DEMOUSER='demo'
 DEMOPW='redhat'
 DOMAIN='example.com'
 
