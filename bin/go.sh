@@ -12,6 +12,9 @@ fi
 
 bin/cache.sh
 
+sudo htpasswd -b /etc/openshift/openshift-passwd $DEMOUSER $DEMOPW
+oc login -u $DEMOUSER -p $DEMOPW
+
 for img in $STI_IMAGESTREAMS; do
   sudo oc create -n openshift -f - <<EOF
 kind: ImageStream
@@ -25,8 +28,15 @@ spec:
 EOF
 done
 
-for proj in $INFRA $DEMOUSER $INTEGRATION $PROD; do
+for proj in $DEMOUSER $INTEGRATION $PROD; do
   oc new-project $proj
+done
+
+# Label the master as region=infra, this assumes the master has master in the name
+sudo oc label node $(oc get node | grep master | awk '{print $1}') region=infra
+
+for proj in $INFRA; do
+  sudo oadm new-project $proj --node-selector="region=infra" --admin=$DEMOUSER
 done
 
 # serviceAccount required for containers running as root
