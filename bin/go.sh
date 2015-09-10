@@ -12,26 +12,17 @@ fi
 
 bin/cache.sh
 
-for img in $STI_IMAGESTREAMS; do
-  sudo oc create -n openshift -f - <<EOF
-kind: ImageStream
-apiVersion: v1
-metadata:
-  name: ${img##*/}
-spec:
-  dockerImageRepository: $img
-  tags:
-  - name: latest
-EOF
-done
-
 for proj in $INFRA $DEMOUSER $INTEGRATION $PROD; do
   oc new-project $proj
 done
 
-# serviceAccount required for containers running as root
+# serviceAccount required for containers running as root, also reused for push/pull
 echo '{"kind": "ServiceAccount", "apiVersion": "v1", "metadata": {"name": "root"}}' | sudo oc create -n $INFRA -f -
 (sudo oc get -o yaml scc privileged; echo - system:serviceaccount:$INFRA:root) | sudo oc update scc privileged -f -
+
+for proj in $INTEGRATION $PROD; do
+  oc policy add-role-to-user system:image-builder system:serviceaccount:$INFRA:root -n $proj
+done
 
 for key in administrator $DEMOUSER; do
   [ -e ~/.ssh/id_rsa_$key ] || ssh-keygen -f ~/.ssh/id_rsa_$key -N ''
