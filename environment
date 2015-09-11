@@ -9,7 +9,7 @@ DEMOPW='redhat'
 DOMAIN='example.com'
 
 # docker images to cache locally
-IMAGES='docker.io/cicddemo/amq:latest docker.io/cicddemo/gogs:latest docker.io/cicddemo/jenkins:latest registry.access.redhat.com/openshift3/mysql-55-rhel7:latest'
+IMAGES='docker.io/cicddemo/amq:latest docker.io/cicddemo/gogs:latest docker.io/cicddemo/jenkins:latest'
 
 # proxy server, if you have one
 http_proxy=
