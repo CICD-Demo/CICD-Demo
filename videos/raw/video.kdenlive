@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mlt title="Anonymous Submission" version="0.9.6" root="/data-ssd/home/jminter/vagrant/ose3/CICD-Demo/videos/raw" LC_NUMERIC="en_GB.UTF-8">
+ <profile width="1280" display_aspect_den="4" colorspace="601" frame_rate_den="1" description="1280x1024" height="1024" display_aspect_num="5" frame_rate_num="25" progressive="1" sample_aspect_num="1" sample_aspect_den="1"/>
+ <producer in="0" out="500" id="black">
+  <property name="mlt_type">producer</property>
+  <property name="length">15000</property>
+  <property name="eof">pause</property>
+  <property name="resource">/data-ssd/home/jminter/black</property>
+  <property name="aspect_ratio">0</property>
+  <property name="mlt_service">colour</property>
+ </producer>
+ <playlist id="black_track">
+  <entry in="0" out="3274" producer="black"/>
+ </playlist>
+ <producer in="0" out="919" id="6">
+  <property name="mlt_type">producer</property>
+  <property name="length">920</property>
+  <property name="eof">pause</property>
+  <property name="resource">snip1.ogv</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.1.stream.type">video</property>
+  <property name="meta.media.1.stream.frame_rate">-nan</property>
+  <property name="meta.media.1.stream.sample_aspect_ratio">1</property>
+  <property name="meta.media.1.codec.width">1280</property>
+  <property name="meta.media.1.codec.height">1024</property>
+  <property name="meta.media.1.codec.frame_rate">15</property>
+  <property name="meta.media.1.codec.pix_fmt">yuv420p</property>
+  <property name="meta.media.1.codec.sample_aspect_ratio">1</property>
+  <property name="meta.media.1.codec.colorspace">709</property>
+  <property name="meta.media.1.codec.name">theora</property>
+  <property name="meta.media.1.codec.long_name">Theora</property>
+  <property name="meta.media.1.codec.bit_rate">0</property>
+  <property name="meta.attr.1.stream.RECORDMYDESKTOP.markup">0.3.8.1</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">-1</property>
+  <property name="video_index">1</property>
+  <property name="mute_on_pause">1</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">15</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">709</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">1024</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <producer in="0" out="1369" id="7">
+  <property name="mlt_type">producer</property>
+  <property name="length">1370</property>
+  <property name="eof">pause</property>
+  <property name="resource">snip2.ogv</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.1.stream.type">video</property>
+  <property name="meta.media.1.stream.frame_rate">-nan</property>
+  <property name="meta.media.1.stream.sample_aspect_ratio">1</property>
+  <property name="meta.media.1.codec.width">1280</property>
+  <property name="meta.media.1.codec.height">1024</property>
+  <property name="meta.media.1.codec.frame_rate">15</property>
+  <property name="meta.media.1.codec.pix_fmt">yuv420p</property>
+  <property name="meta.media.1.codec.sample_aspect_ratio">1</property>
+  <property name="meta.media.1.codec.colorspace">709</property>
+  <property name="meta.media.1.codec.name">theora</property>
+  <property name="meta.media.1.codec.long_name">Theora</property>
+  <property name="meta.media.1.codec.bit_rate">0</property>
+  <property name="meta.attr.1.stream.RECORDMYDESKTOP.markup">0.3.8.1</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">-1</property>
+  <property name="video_index">1</property>
+  <property name="mute_on_pause">1</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">15</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">709</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">1024</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <producer in="0" out="10897" id="1">
+  <property name="mlt_type">producer</property>
+  <property name="length">10898</property>
+  <property name="eof">pause</property>
+  <property name="resource">snip3.ogv</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.1.stream.type">video</property>
+  <property name="meta.media.1.stream.frame_rate">-nan</property>
+  <property name="meta.media.1.stream.sample_aspect_ratio">1</property>
+  <property name="meta.media.1.codec.width">1280</property>
+  <property name="meta.media.1.codec.height">1024</property>
+  <property name="meta.media.1.codec.frame_rate">15</property>
+  <property name="meta.media.1.codec.pix_fmt">yuv420p</property>
+  <property name="meta.media.1.codec.sample_aspect_ratio">1</property>
+  <property name="meta.media.1.codec.colorspace">709</property>
+  <property name="meta.media.1.codec.name">theora</property>
+  <property name="meta.media.1.codec.long_name">Theora</property>
+  <property name="meta.media.1.codec.bit_rate">0</property>
+  <property name="meta.attr.1.stream.RECORDMYDESKTOP.markup">0.3.8.1</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">-1</property>
+  <property name="video_index">1</property>
+  <property name="mute_on_pause">1</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.frame_rate_num">15</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">709</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">1024</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <producer in="0" out="271" id="slowmotion:1:40">
+  <property name="mlt_type">producer</property>
+  <property name="length">272</property>
+  <property name="eof">pause</property>
+  <property name="resource">snip3.ogv</property>
+  <property name="aspect_ratio">1</property>
+  <property name="mlt_service">framebuffer</property>
+  <property name="video_index">1</property>
+ </producer>
+ <playlist id="playlist1">
+  <entry in="200" out="324" producer="6"/>
+  <entry in="387" out="736" producer="6"/>
+  <blank length="25"/>
+  <entry in="112" out="244" producer="7"/>
+  <entry in="285" out="1126" producer="7"/>
+  <blank length="25"/>
+  <entry in="200" out="274" producer="1"/>
+  <entry in="350" out="422" producer="1"/>
+  <entry in="440" out="482" producer="1"/>
+  <entry in="692" out="877" producer="1"/>
+  <entry in="1032" out="1448" producer="1"/>
+  <entry in="80" out="220" producer="slowmotion:1:40"/>
+  <entry in="9457" out="9521" producer="1"/>
+  <entry in="9555" out="9704" producer="1"/>
+  <entry in="9880" out="9951" producer="1"/>
+  <entry in="10134" out="10611" producer="1"/>
+ </playlist>
+ <producer in="0" out="124" id="2">
+  <property name="mlt_type">producer</property>
+  <property name="length">125</property>
+  <property name="eof">pause</property>
+  <property name="resource">slide1.png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="loop">1</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">1024</property>
+  <property name="mlt_service">pixbuf</property>
+ </producer>
+ <producer in="0" out="174" id="3">
+  <property name="mlt_type">producer</property>
+  <property name="length">175</property>
+  <property name="eof">pause</property>
+  <property name="resource">slide2.png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="loop">1</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">1024</property>
+  <property name="mlt_service">pixbuf</property>
+ </producer>
+ <producer in="0" out="124" id="4">
+  <property name="mlt_type">producer</property>
+  <property name="length">125</property>
+  <property name="eof">pause</property>
+  <property name="resource">slide3.png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="loop">1</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">1024</property>
+  <property name="mlt_service">pixbuf</property>
+ </producer>
+ <producer in="0" out="124" id="5">
+  <property name="mlt_type">producer</property>
+  <property name="length">125</property>
+  <property name="eof">pause</property>
+  <property name="resource">slide4.png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="loop">1</property>
+  <property name="meta.media.width">1280</property>
+  <property name="meta.media.height">1024</property>
+  <property name="mlt_service">pixbuf</property>
+ </producer>
+ <playlist id="playlist2">
+  <entry in="0" out="74" producer="2"/>
+  <blank length="350"/>
+  <entry in="0" out="124" producer="3"/>
+  <blank length="875"/>
+  <entry in="0" out="124" producer="4"/>
+  <blank length="1600"/>
+  <entry in="0" out="124" producer="5"/>
+ </playlist>
+ <tractor title="Anonymous Submission" global_feed="1" in="0" out="3274" id="maintractor">
+  <property name="meta.volume">1</property>
+  <track producer="black_track"/>
+  <track hide="audio" producer="playlist1"/>
+  <track hide="audio" producer="playlist2"/>
+  <transition in="10" out="74" id="transition0">
+   <property name="a_track">1</property>
+   <property name="b_track">2</property>
+   <property name="factory">loader</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">luma</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">dissolve</property>
+   <property name="force_track">0</property>
+   <property name="reverse">1</property>
+  </transition>
+  <transition in="500" out="549" id="transition1">
+   <property name="a_track">1</property>
+   <property name="b_track">2</property>
+   <property name="factory">loader</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">luma</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">dissolve</property>
+   <property name="force_track">0</property>
+   <property name="reverse">1</property>
+  </transition>
+  <transition in="425" out="474" id="transition2">
+   <property name="a_track">1</property>
+   <property name="b_track">2</property>
+   <property name="factory">loader</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">luma</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">dissolve</property>
+   <property name="force_track">0</property>
+   <property name="reverse">0</property>
+  </transition>
+  <transition in="1425" out="1474" id="transition3">
+   <property name="a_track">1</property>
+   <property name="b_track">2</property>
+   <property name="factory">loader</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">luma</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">dissolve</property>
+   <property name="force_track">0</property>
+   <property name="reverse">0</property>
+  </transition>
+  <transition in="1500" out="1549" id="transition4">
+   <property name="a_track">1</property>
+   <property name="b_track">2</property>
+   <property name="factory">loader</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">luma</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">dissolve</property>
+   <property name="force_track">0</property>
+   <property name="reverse">1</property>
+  </transition>
+  <transition in="3150" out="3199" id="transition5">
+   <property name="a_track">1</property>
+   <property name="b_track">2</property>
+   <property name="factory">loader</property>
+   <property name="mlt_type">transition</property>
+   <property name="mlt_service">luma</property>
+   <property name="automatic">1</property>
+   <property name="kdenlive_id">dissolve</property>
+   <property name="force_track">0</property>
+   <property name="reverse">0</property>
+  </transition>
+ </tractor>
+ <kdenlivedoc profile="/data-ssd/home/jminter/.kde/share/apps/kdenlive/profiles/customprofile0" kdenliveversion="0.9.10" version="0.88" projectfolder="/data-ssd/home/jminter/kdenlive">
+  <customeffects/>
+  <documentproperties documentid="1441976343146" renderaudiobitrate="160" renderdestination="" renderrescalewidth="320" proxyextension="ts" generateproxy="0" proxyimageminsize="2000" rendertctype="0" verticalzoom="1" renderprofile="H.264/AAC High Profile" renderrescaleheight="240" zonein="0" renderrescale="0" renderscanning="0" renderurl="/data-ssd/home/jminter/kdenlive/video4.mp4" rendertwopass="0" renderplay="0" position="0" proxyminsize="1000" renderstartguide="-1" zoom="6" rendercategory="MP4" renderratio="0" zoneout="0" renderbitrate="20" renderzone="0" renderendguide="-1" renderexportaudio="1" proxyparams="-f mpegts -acodec libmp3lame -ac 2 -ab 128k -vcodec mpeg2video -g 5 -s 640x480 -qscale 7" enableproxy="0" generateimageproxy="0" renderguide="0" rendertcoverlay="0"/>
+  <documentmetadata/>
+  <documentnotes>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;">
+&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;br />&lt;/p>&lt;/body>&lt;/html></documentnotes>
+  <profileinfo width="1280" display_aspect_den="4" frame_rate_den="1" description="1280x1024" height="1024" frame_rate_num="25" display_aspect_num="5" progressive="1" sample_aspect_num="1" sample_aspect_den="1"/>
+  <tracksinfo>
+   <trackinfo blind="0" mute="1" locked="0" trackname="Video 2"/>
+   <trackinfo blind="0" mute="1" locked="0" trackname="Video 1"/>
+  </tracksinfo>
+  <kdenlive_producer audio_max="0" id="1" pix_fmt="yuv420p" default_video="1" fps="-nan" analysisdata="" name="snip3.ogv" videocodecid="theora" colorspace="709" videocodec="Theora" resource="/data-ssd/home/jminter/vagrant/ose3/CICD-Demo/videos/raw/snip3.ogv" default_audio="-1" duration="10898" file_hash="33773c7e3383f911104c448ca9ef778b" aspect_ratio="1" video_max="1" progressive="1" type="2" frame_size="1280x1024" file_size="32552982">
+   <metaproperty tool="" name="meta.attr.1.stream.RECORDMYDESKTOP">0.3.8.1</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer duration="75" frame_size="1280x1024" thumbnail="100" in="0" analysisdata="" file_size="107297" aspect_ratio="1" out="74" file_hash="0b88849c0cda70383426b54fccf8138f" type="5" id="2" name="slide1.png" resource="/data-ssd/home/jminter/vagrant/ose3/CICD-Demo/videos/raw/slide1.png"/>
+  <kdenlive_producer duration="125" frame_size="1280x1024" in="0" analysisdata="" file_size="123238" aspect_ratio="1" out="124" file_hash="ac6cc7b8367024d5f2889c93cd1d5d2d" type="5" id="3" name="slide2.png" resource="/data-ssd/home/jminter/vagrant/ose3/CICD-Demo/videos/raw/slide2.png"/>
+  <kdenlive_producer duration="125" frame_size="1280x1024" thumbnail="100" in="0" analysisdata="" file_size="111206" aspect_ratio="1" out="124" file_hash="bb104b970a229725958662ea57ac6c6a" type="5" id="4" name="slide3.png" resource="/data-ssd/home/jminter/vagrant/ose3/CICD-Demo/videos/raw/slide3.png"/>
+  <kdenlive_producer duration="125" frame_size="1280x1024" in="0" analysisdata="" file_size="101967" aspect_ratio="1" out="124" file_hash="dcd01cf66c74ec0451597294197b1e5c" type="5" id="5" name="slide4.png" resource="/data-ssd/home/jminter/vagrant/ose3/CICD-Demo/videos/raw/slide4.png"/>
+  <kdenlive_producer audio_max="0" id="6" pix_fmt="yuv420p" default_video="1" fps="-nan" analysisdata="" name="snip1.ogv" videocodecid="theora" colorspace="709" videocodec="Theora" resource="/data-ssd/home/jminter/vagrant/ose3/CICD-Demo/videos/raw/snip1.ogv" default_audio="-1" duration="920" file_hash="b921fcc6032f65f97ba522a980961a48" aspect_ratio="1" video_max="1" progressive="1" type="2" frame_size="1280x1024" file_size="3504606">
+   <metaproperty tool="" name="meta.attr.1.stream.RECORDMYDESKTOP">0.3.8.1</metaproperty>
+  </kdenlive_producer>
+  <kdenlive_producer audio_max="0" id="7" pix_fmt="yuv420p" default_video="1" fps="-nan" analysisdata="" name="snip2.ogv" videocodecid="theora" colorspace="709" videocodec="Theora" resource="/data-ssd/home/jminter/vagrant/ose3/CICD-Demo/videos/raw/snip2.ogv" default_audio="-1" duration="1370" file_hash="74438878568e991b7c51bb1de05ab2c6" aspect_ratio="1" video_max="1" progressive="1" type="2" frame_size="1280x1024" file_size="4456630">
+   <metaproperty tool="" name="meta.attr.1.stream.RECORDMYDESKTOP">0.3.8.1</metaproperty>
+  </kdenlive_producer>
+  <markers/>
+  <groups/>
+ </kdenlivedoc>
+</mlt>
